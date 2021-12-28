@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+    <body style="background: #CAFFFF"></body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Modificar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="/" class="navbar-brand">Veterinaria ACM - Editar</a>
+    </nav><br>
+    
+    <div class="container">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/edit/<%= valor._id %>" method="POST">
+                        <h2>Ingrese los nuevos datos de la mascota</h2><br>
+                        <h6>Nombre de la mascota:</h6>
+                        <div class="form-group">
+                            <input type="text" name="Nombre" placeholder="Nombre de la mascota" class="form-control" value="<%= valor.Nombre %>" >
+                        </div>
+                        <h6>Tipo de mascota:</h6>
+                        <div class="form-group">
+                            <input type="text" name="Tipo_Mascota" placeholder="Tipo de mascota" class="form-control" value="<%= valor.Tipo_Mascota %>" readonly>
+                        </div>
+                        <h6>Sexo:</h6>
+                        <div class="form-group">
+                            <input type="text" name="Sexo" placeholder="Sexo" class="form-control" value="<%= valor.Sexo %>" readonly>
+                        </div>
+                        <h6>Edad:</h6>
+                        <div class="form-group">
+                            <input type="text" name="Edad" placeholder="Edad" class="form-control" value="<%= valor.Edad %>">
+                        </div>
+                        <h6>Peso en Kg:</h6>
+                        <div class="form-group">
+                            <input type="text" name="Peso_Kg" placeholder="Peso en Kg" class="form-control" value="<%= valor.Peso_Kg %>">
+                        </div>
+                        <h6>Raza:</h6>
+                        <div class="form-group">
+                            <input type="text" name="Raza" placeholder="Raza" class="form-control" value="<%= valor.Raza %>" readonly>
+                        </div><br>
+                        <button class="btn btn-primary">Actualizar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
